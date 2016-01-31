@@ -1,0 +1,29 @@
+{
+  "name": "angular-select2",
+  "homepage": "https://github.com/jj-chenjunjie/angular-select2",
+  "authors": [
+    "Jason <943388837@qq.com>"
+  ],
+  "description": "select2 for angular",
+  "main": "",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "angualr",
+    "select2"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "select2": "~4.0.1"
+  }
+}
