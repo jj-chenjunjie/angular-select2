@@ -1,5 +1,7 @@
-(function(){
-	angular.module('ui', []).directive('angularSelect2', function($http){
+(function(module){	
+
+})(function(angular){
+	return angular.module('ui', []).directive('angularSelect2', function($http){
 		return {
 			scope: {
 				angularSelect2: '=',
@@ -8,6 +10,7 @@
 			restrict: 'A',
 			link: {
 				pre: function(scope, element, attrs, controllers) {
+					
 //					console.log("pre");
 					var select2, data;
 					
@@ -76,4 +79,4 @@
 		    },
 		};
 	});
-})();
+}(angular));

@@ -1,0 +1,28 @@
+{
+  "name": "angular-select2",
+  "version": "1.0.0",
+  "description": "select2 for angular version 1.0.0",
+  "main": "js/angualr-select2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jj-chenjunjie/angular-select2.git"
+  },
+  "keywords": [
+    "angular",
+    "select2"
+  ],
+  "author": "Jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jj-chenjunjie/angular-select2/issues"
+  },
+  "homepage": "https://github.com/jj-chenjunjie/angular-select2#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1"
+  }
+}

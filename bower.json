@@ -5,7 +5,7 @@
     "Jason <943388837@qq.com>"
   ],
   "description": "select2 for angular",
-  "main": "",
+  "main": "angular-select2.js",
   "moduleType": [
     "amd",
     "globals"
@@ -23,8 +23,12 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.9",
+    "angular": "~1.5.3",
     "select2": "~4.0.1",
     "jquery": "~2.2.2"
+  },
+  "devDependencies": {
+    "angularAMD": "~0.2.1",
+    "angular-route": "~1.5.3"
   }
 }

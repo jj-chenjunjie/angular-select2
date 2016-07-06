@@ -33,12 +33,13 @@
 		<p>the selected value is {{obj5.value}}</p>
 		<hr />
 		<div><button ng-click="reset()">重置</button><button ng-click="set()">设置值</button></div>
+		<input type="time"/>
 	</body>
 	
 	<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="bower_components/select2/dist/js/select2.full.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/angular-select2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="angular-select2.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var data = [];
 		for(var i = 1; i <= 10; i++){
@@ -48,6 +49,35 @@
 			data: data
 		});
 		var app = angular.module('myApp', ['ui']);
+		
+		app.config(function($httpProvider){
+			$httpProvider.interceptors.push(function($q) {
+				return {
+					'request': function(config) {
+						console.log("request");	
+//						throw('aaa'); 
+						return config;
+					},
+					
+					'requestError': function(rejection){
+						console.log("requestError", rejection);
+						return $q.reject("reason");;
+					},
+					
+					'response': function(response){
+						console.log("response", response);
+						return response;
+					},
+					
+					'responseError': function(rejection){
+						console.log("responseError", rejection);
+						return $q.reject(rejection);
+					}
+					
+				};
+			});
+		});
+		
 		app.run(function($rootScope){
 			$rootScope.name = 'Jaosn';
 			$rootScope.data = data;
@@ -64,7 +94,7 @@
 //			$rootScope.obj1 = {value: 2};
 			$rootScope.obj2 = {value: 2};
 			$rootScope.obj3 = {value: 2};
-			$rootScope.obj4 = {value: 2};
+//			$rootScope.obj4 = {value: 2};
 			$rootScope.set = function(){
 				$rootScope.obj1 = {value: 3};
 				$rootScope.obj2 = {value: 3};
