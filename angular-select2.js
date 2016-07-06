@@ -3,6 +3,15 @@
 	
 	var mSelect2 = angular.module('select2', []);
 	
+	mSelect2.provider('Select2', function() {
+		
+		this.setDefaultOption = function(key, value) {
+			$.fn.select2.defaults.set(key, value);
+		}
+		
+		this.$get = function () {}
+	});
+	
 	mSelect2.directive('select2', function () {
 
 		return {

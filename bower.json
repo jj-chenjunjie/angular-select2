@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "angularAMD": "~0.2.1",
-    "angular-route": "~1.5.3"
+    "angular-route": "~1.5.3",
+    "select2-bootstrap-theme": "^0.1.0-beta.8"
   }
 }
