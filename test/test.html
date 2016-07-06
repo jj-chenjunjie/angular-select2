@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bower_components/select2/dist/css/select2.css"/>
+
+	</head>
+	<body ng-app="select2Test">
+		
+		<select select2="selectOptions" ng-model="value"></select>
+		<p>{{value}}</p>
+		<select select2="{data: data}" ng-model="value" data-placeholder="请选择" data-allow-clear="true"></select>
+		<p>{{value}}</p>
+		<select name="" ng-model="bac">
+			<option value="1">1</option>
+			<option value="2" >2</option>
+		</select>
+	</body>
+	
+	
+	<script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../bower_components/select2/dist/js/select2.full.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../angular-select2.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	
+		var data = [];
+		for(var i = 1; i <= 10; i++){
+			data.push({id: i, text: 'item ' + i})
+		}
+		angular.module('select2Test', ['select2']).run(function($rootScope) {
+			$rootScope.data = data;
+		});
+	</script>
+</html>
