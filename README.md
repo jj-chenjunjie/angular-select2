@@ -1,3 +1,3 @@
 angular-select2
 =
-select2 for angular
+select2 with angular
